@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Delivery Order &amp; Invoice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.5;
+    }
+    .header {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .subheader {
+      text-align: center;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .details p {
+      margin: 5px 0;
+    }
+    .details p strong {
+      display: inline-block;
+      width: 150px;
+    }
+    table.items {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 10px 0;
+    }
+    table.items th, table.items td {
+      border: 1px solid #000;
+      padding: 8px;
+      text-align: left;
+    }
+    table.items th {
+      background-color: #f2f2f2;
+    }
+    .page {
+      text-align: right;
+      font-style: italic;
+      margin-top: 20px;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #000;
+      margin: 40px 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Delivery Order Section -->
+  <div class="header">Delivery Order &amp; Invoice</div>
+  <div class="subheader">Delivery Order (D.O.)</div>
+  <div class="details">
+    <p><strong>D.O. Number:</strong> 12345</p>
+    <p><strong>Date:</strong> 10th February 2025</p>
+    <p><strong>Bill To:</strong> ABC Retailers, 123 Market Street, City, ZIP Code</p>
+    <p><strong>Ship To:</strong> ABC Retailers, 123 Market Street, City, ZIP Code</p>
+  </div>
+  
+  <table class="items">
+    <thead>
+      <tr>
+        <th>Item Code</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Unit</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>001</td>
+        <td>50-inch LED TV</td>
+        <td>10</td>
+        <td>Pieces</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>Bluetooth Speakers</td>
+        <td>15</td>
+        <td>Pieces</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="details">
+    <p><strong>Total Quantity:</strong> 25</p>
+    <p><strong>Prepared By:</strong> _________________________</p>
+    <p><strong>Approved By:</strong> _________________________</p>
+    <p><strong>Warehouse Approved By:</strong> _________________________</p>
+    <p><strong>Driver Name:</strong> _________________________</p>
+    <p><strong>Acknowledgement:</strong> I hereby acknowledge receipt of the above items in good condition.</p>
+    <p><strong>Signature:</strong> _________________________ &nbsp;&nbsp;&nbsp; <strong>Date:</strong> _________________________</p>
+  </div>
+  
+  <div class="page">Page 1</div>
+  
+  <hr>
+  
+  <!-- Invoice Section -->
+  <div class="header">Delivery Order &amp; Invoice</div>
+  <div class="subheader">Invoice</div>
+  <div class="details">
+    <p><strong>Invoice Number:</strong> 98765</p>
+    <p><strong>Date:</strong> 10th February 2025</p>
+    <p><strong>D.O. Number:</strong> 12345</p>
+    <p><strong>Billing Address:</strong> ABC Retailers, 123 Market Street, City, ZIP Code</p>
+  </div>
+  
+  <table class="items">
+    <thead>
+      <tr>
+        <th>Item Code</th>
+        <th>Description</th>
+        <th>Quantity</th>
+        <th>Unit</th>
+        <th>Price</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>001</td>
+        <td>50-inch LED TV</td>
+        <td>10</td>
+        <td>Pieces</td>
+        <td>$500</td>
+        <td>$5,000</td>
+      </tr>
+      <tr>
+        <td>002</td>
+        <td>Bluetooth Speakers</td>
+        <td>15</td>
+        <td>Pieces</td>
+        <td>$100</td>
+        <td>$1,500</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="details">
+    <p><strong>Subtotal:</strong> $6,500</p>
+    <p><strong>Tax (10%):</strong> $650</p>
+    <p><strong>Total Amount:</strong> $7,150</p>
+    <p><strong>Payment Terms:</strong> Payment due within 30 days.</p>
+    <p><strong>Bank Name:</strong> XYZ Bank</p>
+    <p><strong>Account Number:</strong> 123456789</p>
+    <p><strong>SWIFT Code:</strong> XYZ123</p>
+  </div>
+  
+  <div class="page">Page 2</div>
+</body>
+</html>

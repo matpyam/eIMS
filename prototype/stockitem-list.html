@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Listing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+    <link href="menu.css" rel="stylesheet">
+    <link href="stockitem-list.css" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <div id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <button id="toggleSidebar" class="toggle-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <span class="sidebar-title">Inventory System</span>
+            </div>
+            <nav>
+                <ul id="menu" class="menu">
+                    <!-- Menu items will be dynamically inserted here -->
+                </ul>
+            </nav>
+        </div>
+        <div class="content-container">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page" data-menu="stockitem">Stock</li>
+                    </ol>
+                </nav>
+                <h1 class="mb-4">
+                    <i class="fas fa-cubes"></i>
+                    Stock Listing
+                </h1>
+                <ul class="nav nav-tabs" id="viewTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="inventory-tab" data-bs-toggle="tab" data-bs-target="#inventory" type="button" role="tab" aria-controls="inventory" aria-selected="true">
+                          Inventory
+                        </button>
+                      </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="stock-tab" data-bs-toggle="tab" data-bs-target="#stock" type="button" role="tab" aria-controls="stock" aria-selected="false">
+                        Stock Order
+                      </button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="viewTabsContent">
+                    <!-- INVENTORY -->
+                    <div class="tab-pane fade show active" id="inventory" role="tabpanel" aria-labelledby="inventory-tab">
+                        <table class="ims-list table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th width="20%">ITEM CODE</th>
+                                    <th width="60%">ITEM NAME</th>
+                                    <th width="10%" style="text-align: right;">QUANTITY</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- GRN list will be populated here -->
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- STOCK -->
+                    <div class="tab-pane fade" id="stock" role="tabpanel" aria-labelledby="stock-tab">
+                        <div class="d-flex justify-content-end mb-3">
+                            <a href="stockitem-entry.html" class="btn btn-primary">
+                                <i class="fas fa-plus"></i> 
+                                Add New Stock
+                            </a>
+                        </div>
+                        <table class="ims-list table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th width="20%">STOCK NO</th>
+                                    <th width="40%">CREATED DATE</th>
+                                    <th width="30%" colspan="3"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- GRN list will be populated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="menu.js"></script>
+    <script src="stockitem-list.js"></script>
+    <script src="app-end.js"></script>
+</body>
+</html>

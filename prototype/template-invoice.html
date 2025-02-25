@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Invoice Sample</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.5;
+    }
+    .header {
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .business-info {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .invoice-info, .bill-to, .totals, .payment-terms, .payment-methods {
+      margin-bottom: 20px;
+    }
+    .invoice-info p, .bill-to p {
+      margin: 5px 0;
+    }
+    .invoice-info p strong, .bill-to p strong {
+      display: inline-block;
+      width: 150px;
+    }
+    table.items {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    table.items th, table.items td {
+      border: 1px solid #000;
+      padding: 8px;
+      text-align: left;
+    }
+    table.items th {
+      background-color: #f2f2f2;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 40px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">Invoice</div>
+  
+  <div class="business-info">
+    <p>[Your Business Name]</p>
+    <p>[Your Business Address]</p>
+    <p>[City, State, ZIP Code]</p>
+    <p>[Phone Number] | [Email Address]</p>
+  </div>
+  
+  <div class="invoice-info">
+    <p><strong>Invoice Number:</strong> [#XXXX]</p>
+    <p><strong>Invoice Date:</strong> [MM/DD/YYYY]</p>
+    <p><strong>Due Date:</strong> [MM/DD/YYYY]</p>
+  </div>
+  
+  <div class="bill-to">
+    <p><strong>Bill To:</strong></p>
+    <p>[Client's Name]</p>
+    <p>[Client's Business Name]</p>
+    <p>[Client's Address]</p>
+    <p>[City, State, ZIP Code]</p>
+  </div>
+  
+  <table class="items">
+    <thead>
+      <tr>
+        <th>Item Description</th>
+        <th>Quantity</th>
+        <th>Unit Price</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Service/Product 1 Brief description</td>
+        <td>X</td>
+        <td>$XX.XX</td>
+        <td>$XXX.XX</td>
+      </tr>
+      <tr>
+        <td>Service/Product 2 Brief description</td>
+        <td>X</td>
+        <td>$XX.XX</td>
+        <td>$XXX.XX</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="totals">
+    <p><strong>Subtotal:</strong> $XXX.XX</p>
+    <p><strong>Tax (% or $):</strong> $XX.XX</p>
+    <p><strong>Total Due:</strong> $XXX.XX</p>
+  </div>
+  
+  <div class="payment-terms">
+    <p><strong>Payment Terms:</strong></p>
+    <p>Payment is due by [MM/DD/YYYY]. Late payments may be subject to a [X]% late fee.</p>
+  </div>
+  
+  <div class="payment-methods">
+    <p><strong>Payment Methods Accepted:</strong></p>
+    <ul>
+      <li>Bank Transfer: [Bank Details]</li>
+      <li>PayPal: [PayPal Email]</li>
+      <li>Other: [Other Payment Options]</li>
+    </ul>
+  </div>
+  
+  <div class="footer">
+    <p>Thank You for Your Business!</p>
+  </div>
+</body>
+</html>

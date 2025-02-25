@@ -1,0 +1,84 @@
+body {
+    background-color: #f8f9fa;
+    font-size: 0.9rem;
+}
+
+.container {
+    padding: 0px 30px;
+}
+
+h1 {
+    color: #007bff;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    color: #007bff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.form-control, .form-select, .btn {
+    font-size: 0.9rem;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+.form-label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+textarea.form-control {
+    font-size: 0.9rem;
+}
+
+.table {
+    background-color: #ffffff;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f1f8ff;
+}
+
+table.ims-list button {
+    min-width: 110px;
+}
+
+.nav.nav-tabs {
+    margin-bottom: 15px;
+}
+
+.ims-btn-submit {
+    margin-top: 50px;
+}
+
+@media (max-width: 767px) {
+    .form-label {
+        margin-bottom: 0.25rem;
+    }
+}

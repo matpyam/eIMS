@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Entry</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="app.css" rel="stylesheet">
+    <link href="menu.css" rel="stylesheet">
+    <link href="stockitem-list.css" rel="stylesheet">
+</head>
+<body>
+    <div class="layout-container">
+        <div id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <button id="toggleSidebar" class="toggle-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <span class="sidebar-title">Inventory System</span>
+            </div>
+            <nav>
+                <ul id="menu" class="menu">
+                    <!-- Menu items will be dynamically inserted here -->
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="content-container">
+            <!-- Your form content here -->
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active" aria-current="page" data-menu="stockitem">Stock</li>
+                    </ol>
+                </nav>
+                <header class="d-flex justify-content-between align-items-center mb-3">
+                    <h1>
+                        <i class="fas fa-cubes"></i>
+                        Stock Entry
+                    </h1>
+                    <p class="text-end"><a href="stockitem-list.html"><i class="fa fa-arrow-left"></i> Back to Stock Listing</a></p>
+                </header>
+                <form id="grnForm">
+                    <div class="row mb-3">
+                        <div class="col-lg-6 col-md-12 mb-3">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12 mb-2">
+                                    <label for="grnNo" class="form-label">STOCK NO</label>
+                                </div>
+                                <div class="col-md-8 col-sm-12">
+                                    <input type="text" class="form-control" id="grnNo" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 mb-3">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12 mb-2">
+                                    <label for="date" class="form-label">DATE</label>
+                                </div>
+                                <div class="col-md-8 col-sm-12">
+                                    <input type="date" class="form-control" id="date" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-lg-6 col-md-12 mb-3">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12 mb-2">
+                                    <label for="InvoiceNo" class="form-label">INVOICE NO</label>
+                                </div>
+                                <div class="col-md-8 col-sm-12">
+                                    <input type="text" class="form-control" id="InvoiceNo" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 mb-3">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-12 mb-2">
+                                    <label for="status" class="form-label">STATUS</label>
+                                </div>
+                                <div class="col-md-8 col-sm-12">
+                                    <select class="form-select" id="status" required>
+                                        <option value="QC_PENDING">QC_PENDING</option>
+                                        <option value="COMPLETE">COMPLETE</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-12">
+                            <h3>GOODS</h3>
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="goodsTable">
+                                    <thead>
+                                        <tr>
+                                            <th>ITEM CODE</th>
+                                            <th>NAME</th>
+                                            <th>QUANTITY</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><input type="text" class="form-control" name="itemCode[]" required></td>
+                                            <td><input type="text" class="form-control" name="description[]" required></td>
+                                            <td><input type="number" class="form-control" name="quantity[]" required></td>
+                                            <td><button type="button" class="btn btn-danger btn-sm delete-row"><i class="fas fa-trash"></i></button></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <button type="button" class="btn btn-secondary btn-sm mt-2" id="addRow">Add Row</button>
+                        </div>
+                    </div>
+                    <div class="row ims-btn-submit">
+                        <div class="col-12">
+                            <button type="button" class="btn btn-secondary" onclick="window.history.back();">Cancel</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="button" class="btn btn-dark ims-btn-link" data-url="stockitem-grn.html">Create GRN</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="menu.js"></script>
+    <script src="stockitem-entry.js"></script>
+    <script src="app-end.js"></script>
+</body>
+</html>
