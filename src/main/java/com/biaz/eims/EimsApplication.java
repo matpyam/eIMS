@@ -1,4 +1,4 @@
-package com.biaz.eims.eims;
+package com.biaz.eims;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
